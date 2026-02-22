@@ -30,15 +30,15 @@
     <div class="tracker-card grid grid-cols-1  md:grid-cols-3 my-4 gap-4 mb-8">
       <div class="border-1 border-gray-200 rounded-xl  bg-white p-5">
         <p>Total</p>
-        <span class="text-[#002C5C] text-2xl font-bold">0</span>
+        <span id="Total" class="text-[#002C5C] text-2xl font-bold">0</span>
       </div>
       <div class="border-1 border-gray-200 rounded-xl  bg-white p-5">
         <p>Interview</p>
-        <span class="text-[#10B981] text-2xl font-bold">0</span>
+        <span id="Interview" class="text-[#10B981] text-2xl font-bold">0</span>
       </div>
       <div class="border-1 border-gray-200 rounded-xl  bg-white p-5">
         <p>Rejected</p>
-        <span class="text-[#EF4444] text-2xl font-bold">0</span>
+        <span id="Rejected" class="text-[#EF4444] text-2xl font-bold">0</span>
       </div>
     
 
@@ -54,7 +54,57 @@
 </header>
 
 
+<main>
 
+<div class="heading flex justify-between my-8">
+  <h2 class="text-[#002C5C] text-xl font-bold">Available Jobs</h2>
+  <p class="text-[#64748B] font-medium"> <span>0 </span>jobs</p>
+</div>
+
+<div class="btn-1 space-x-2">
+    <button class="bg-white text-[#64748B] border-1 border-gray-100 rounded  w-[100px] py-2 px-4">All </button>
+    <button class="bg-white text-[#64748B] border-1 border-gray-100 rounded  w-[100px] py-2 px-4">Interview</button>
+    <button class="bg-white text-[#64748B] border-1 border-gray-100 rounded  w-[100px] py-2 px-4">Rejected</button>
+</div>
+
+
+
+<div class="All-card  ">
+
+<div class="card-1 border-1 border-gray-100 bg-white rounded my-3">
+       <div class="card-heading">
+        <h3 class="text-[#002C5C] text-xl font-medium">Mobile First Corp</h3>
+        <p class="text-[#64748B] text-xl">D Native Developer</p>
+       </div>
+       <ul type="none" class="text-[#64748B] flex gap-3">
+        <li>Remote</li>
+        <li>•</li> 
+          <li>Full-time </li>
+        <li>•</li>
+          <li>$130,000 - $175,000</li>
+       </ul>
+
+       <div>
+        <p class="status bg-[#EEF4FF] max-w-[150px] text-center py-1 px-2 " >Not Applied</p>
+        <p>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+       </div>
+
+       <div class="btn-2 flex gap-2">
+         <button class="text-[#10B981] rounded py-1 px-2 border-1">Interview</button>
+         <button class="text-[#EF4444] rounded py-1 px-2 border-1">Rejected</button>
+
+       </div>
+
+</div>
+
+
+
+</div>
+
+
+
+
+</main>
 
 
 
