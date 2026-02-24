@@ -57,49 +57,242 @@
 <main>
 
 <div class="heading flex justify-between my-8">
-  <h2 class="text-[#002C5C] text-xl font-bold">Available Jobs</h2>
+  <h2 class="text-[#002C5C] text-2xl font-bold">Available Jobs</h2>
   <p class="text-[#64748B] font-medium"> <span>0 </span>jobs</p>
 </div>
 
-<div class="btn-1 space-x-2">
-    <button class="bg-white text-[#64748B] border-1 border-gray-100 rounded  w-[100px] py-2 px-4">All </button>
-    <button class="bg-white text-[#64748B] border-1 border-gray-100 rounded  w-[100px] py-2 px-4">Interview</button>
-    <button class="bg-white text-[#64748B] border-1 border-gray-100 rounded  w-[100px] py-2 px-4">Rejected</button>
+<div id="btn-1" class=" space-x-2 space-y-3 ">
+    <button onclick="filter('all-btn')"    id="all-btn"  class="bg-[#3B82F6] text-white border-1 border-gray-100 rounded  w-[100px] py-2 px-4">All </button>
+    <button onclick="filter('inter-btn')"  id="inter-btn" class="bg-white text-[#64748B] border-1 border-gray-100 rounded  w-[100px] py-2 px-4">Interview</button>
+    <button onclick="filter('reject-btn')" id="reject-btn" class="bg-white text-[#64748B] border-1 border-gray-100 rounded  w-[100px] py-2 px-4">Rejected</button>
 </div>
 
 
-
-<div class="All-card  ">
-
-<div class="card-1 border-1 border-gray-100 bg-white rounded my-3">
-       <div class="card-heading">
-        <h3 class="text-[#002C5C] text-xl font-medium">Mobile First Corp</h3>
-        <p class="text-[#64748B] text-xl">D Native Developer</p>
+<!-- ALL jobs  -->
+ <div id="All-card">
+<div class="card-1 border-1 border-gray-100 bg-white py-8 px-5 space-y-3   rounded my-3 md:flex justify-between ">
+     <div class="space-y-5  ">
+       <div class="card-heading space-y-2">
+        <h3 class="company  text-[#002C5C] text-2xl font-medium">Mobile First Corp</h3>
+        <p class="role text-[#64748B] text-xl">D Native Developer</p>
        </div>
-       <ul type="none" class="text-[#64748B] flex gap-3">
-        <li>Remote</li>
-        <li>•</li> 
-          <li>Full-time </li>
-        <li>•</li>
-          <li>$130,000 - $175,000</li>
+       <ul type="none" class="offer text-[#64748B] space-y-2 md:flex  gap-3">
+         <li>Remote</li>
+          
+        <li>• Full-time </li>
+ 
+          <li>•  $130,000 - $175,000</li>
        </ul>
 
-       <div>
-        <p class="status bg-[#EEF4FF] max-w-[150px] text-center py-1 px-2 " >Not Applied</p>
-        <p>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+       <div class="space-y-3">
+        <p class="status bg-[#EEF4FF] max-w-[150px] text-center py-1 px-2 rounded " >NOT  APPLIED</p>
+        <p class="description" >Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
        </div>
 
-       <div class="btn-2 flex gap-2">
-         <button class="text-[#10B981] rounded py-1 px-2 border-1">Interview</button>
-         <button class="text-[#EF4444] rounded py-1 px-2 border-1">Rejected</button>
+       <div class="btn-2 flex gap-3">
+         <button class=" interview  text-[#10B981] rounded py-1 px-2 border-1">Interview</button>
+         <button class="  reject    text-[#EF4444] rounded py-1 px-2 border-1">Rejected</button>
 
        </div>
 
+     
+
+</div>
+  <div class="delete-btn cursor-pointer"><img src="./Assets/delete.png "  alt=""></div>
+
+
+
+</div>
+<div class="card-2 border-1 border-gray-100 bg-white py-8 px-5 space-y-3 rounded my-3 md:flex justify-between">
+     <div class="space-y-5">
+       <div class="card-heading space-y-2">
+        <h3 class="company text-[#002C5C] text-2xl font-medium">TechNova Solutions</h3>
+        <p class="role text-[#64748B] text-xl">Frontend Developer</p>
+       </div>
+       <ul type="none" class="offer text-[#64748B] space-y-2 md:flex gap-3">
+         <li>Onsite</li>
+         <li>• Full-time</li>
+         <li>• $90,000 - $120,000</li>
+       </ul>
+
+       <div class="space-y-3">
+        <p class="status bg-[#EEF4FF] max-w-[150px] text-center py-1 px-2 rounded">NOT APPLIED</p>
+        <p class="description">Develop responsive web interfaces using React and Tailwind CSS for enterprise clients.</p>
+       </div>
+
+       <div class="btn-2 flex gap-3">
+         <button class="interview text-[#10B981] rounded py-1 px-2 border-1">Interview</button>
+         <button class="reject text-[#EF4444] rounded py-1 px-2 border-1">Rejected</button>
+       </div>
+</div>
+<div class="delete-btn cursor-pointer"><img src="./Assets/delete.png" alt=""></div>
+</div>
+<div class="card-3 border-1 border-gray-100 bg-white py-8 px-5 space-y-3 rounded my-3 md:flex justify-between">
+     <div class="space-y-5">
+       <div class="card-heading space-y-2">
+        <h3 class="company text-[#002C5C] text-2xl font-medium">DataBridge Inc</h3>
+        <p class="role text-[#64748B] text-xl">Backend Engineer</p>
+       </div>
+       <ul type="none" class="offer text-[#64748B] space-y-2 md:flex gap-3">
+         <li>Remote</li>
+         <li>• Contract</li>
+         <li>• $80,000 - $110,000</li>
+       </ul>
+
+       <div class="space-y-3">
+        <p class="status bg-[#EEF4FF] max-w-[150px] text-center py-1 px-2 rounded">NOT APPLIED</p>
+        <p class="description">Build scalable REST APIs using Node.js and MongoDB for fintech applications.</p>
+       </div>
+
+       <div class="btn-2 flex gap-3">
+         <button class="interview text-[#10B981] rounded py-1 px-2 border-1">Interview</button>
+         <button class="reject text-[#EF4444] rounded py-1 px-2 border-1">Rejected</button>
+       </div>
+</div>
+<div class="delete-btn cursor-pointer"><img src="./Assets/delete.png" alt=""></div>
+</div>
+<div class="card-4 border-1 border-gray-100 bg-white py-8 px-5 space-y-3 rounded my-3 md:flex justify-between">
+     <div class="space-y-5">
+       <div class="card-heading space-y-2">
+        <h3 class="company text-[#002C5C] text-2xl font-medium">CloudSync Labs</h3>
+        <p class="role text-[#64748B] text-xl">DevOps Engineer</p>
+       </div>
+       <ul type="none" class="offer text-[#64748B] space-y-2 md:flex gap-3">
+         <li>Hybrid</li>
+         <li>• Full-time</li>
+         <li>• $115,000 - $150,000</li>
+       </ul>
+
+       <div class="space-y-3">
+        <p class="status bg-[#EEF4FF] max-w-[150px] text-center py-1 px-2 rounded">NOT APPLIED</p>
+        <p class="description">Manage CI/CD pipelines and cloud infrastructure using AWS and Docker.</p>
+       </div>
+
+       <div class="btn-2 flex gap-3">
+         <button class="interview text-[#10B981] rounded py-1 px-2 border-1">Interview</button>
+         <button class="reject text-[#EF4444] rounded py-1 px-2 border-1">Rejected</button>
+       </div>
+</div>
+<div class="delete-btn cursor-pointer"><img src="./Assets/delete.png" alt=""></div>
+</div>
+<div class="card-5 border-1 border-gray-100 bg-white py-8 px-5 space-y-3 rounded my-3 md:flex justify-between">
+     <div class="space-y-5">
+       <div class="card-heading space-y-2">
+        <h3 class="company text-[#002C5C] text-2xl font-medium">AI Visionary</h3>
+        <p class="role text-[#64748B] text-xl">Machine Learning Engineer</p>
+       </div>
+       <ul type="none" class="offer text-[#64748B] space-y-2 md:flex gap-3">
+         <li>Remote</li>
+         <li>• Full-time</li>
+         <li>• $125,000 - $170,000</li>
+       </ul>
+
+       <div class="space-y-3">
+        <p class="status bg-[#EEF4FF] max-w-[150px] text-center py-1 px-2 rounded">NOT APPLIED</p>
+        <p class="description">Design and deploy predictive models using Python and TensorFlow.</p>
+       </div>
+
+       <div class="btn-2 flex gap-3">
+         <button class="interview text-[#10B981] rounded py-1 px-2 border-1">Interview</button>
+         <button class="reject text-[#EF4444] rounded py-1 px-2 border-1">Rejected</button>
+       </div>
+</div>
+<div class="delete-btn cursor-pointer"><img src="./Assets/delete.png" alt=""></div>
+</div>
+<div class="card-6 border-1 border-gray-100 bg-white py-8 px-5 space-y-3 rounded my-3 md:flex justify-between">
+     <div class="space-y-5">
+       <div class="card-heading space-y-2">
+        <h3 class="company text-[#002C5C] text-2xl font-medium">CyberSecure Ltd</h3>
+        <p class="role text-[#64748B] text-xl">Security Analyst</p>
+       </div>
+       <ul type="none" class="offer text-[#64748B] space-y-2 md:flex gap-3">
+         <li>Onsite</li>
+         <li>• Full-time</li>
+         <li>• $95,000 - $130,000</li>
+       </ul>
+
+       <div class="space-y-3">
+        <p class="status bg-[#EEF4FF] max-w-[150px] text-center py-1 px-2 rounded">NOT APPLIED</p>
+        <p class="description">Monitor security threats and conduct vulnerability assessments.</p>
+       </div>
+
+       <div class="btn-2 flex gap-3">
+         <button class="interview text-[#10B981] rounded py-1 px-2 border-1">Interview</button>
+         <button class="reject text-[#EF4444] rounded py-1 px-2 border-1">Rejected</button>
+       </div>
+</div>
+<div class="delete-btn cursor-pointer"><img src="./Assets/delete.png" alt=""></div>
+</div>
+
+<div class="card-7 border-1 border-gray-100 bg-white py-8 px-5 space-y-3 rounded my-3 md:flex justify-between">
+     <div class="space-y-5">
+       <div class="card-heading space-y-2">
+        <h3 class="company text-[#002C5C] text-2xl font-medium">DesignPro Studio</h3>
+        <p class="role text-[#64748B] text-xl">UI/UX Designer</p>
+       </div>
+       <ul type="none" class="offer text-[#64748B] space-y-2 md:flex gap-3">
+         <li>Remote</li>
+         <li>• Part-time</li>
+         <li>• $60,000 - $85,000</li>
+       </ul>
+
+       <div class="space-y-3">
+        <p class="status bg-[#EEF4FF] max-w-[150px] text-center py-1 px-2 rounded">NOT APPLIED</p>
+        <p class="description">Create user-centered designs and interactive prototypes using Figma.</p>
+       </div>
+
+       <div class="btn-2 flex gap-3">
+         <button class="interview text-[#10B981] rounded py-1 px-2 border-1">Interview</button>
+         <button class="reject text-[#EF4444] rounded py-1 px-2 border-1">Rejected</button>
+       </div>
+</div>
+<div class="delete-btn cursor-pointer"><img src="./Assets/delete.png" alt=""></div>
+</div>
+
+<div class="card-8 border-1 border-gray-100 bg-white py-8 px-5 space-y-3 rounded my-3 md:flex justify-between">
+     <div class="space-y-5">
+       <div class="card-heading space-y-2">
+        <h3 class="company text-[#002C5C] text-2xl font-medium">NextGen Systems</h3>
+        <p class="role text-[#64748B] text-xl">Full Stack Developer</p>
+       </div>
+       <ul type="none" class="offer text-[#64748B] space-y-2 md:flex gap-3">
+         <li>Hybrid</li>
+         <li>• Full-time</li>
+         <li>• $100,000 - $140,000</li>
+       </ul>
+
+       <div class="space-y-3">
+        <p class="status bg-[#EEF4FF] max-w-[150px] text-center py-1 px-2 rounded">NOT APPLIED</p>
+        <p class="description">Work on MERN stack applications and build scalable web platforms.</p>
+       </div>
+
+       <div class="btn-2 flex gap-3">
+         <button class="interview text-[#10B981] rounded py-1 px-2 border-1">Interview</button>
+         <button class="reject text-[#EF4444] rounded py-1 px-2 border-1">Rejected</button>
+       </div>
+</div>
+<div class="delete-btn cursor-pointer"><img src="./Assets/delete.png" alt=""></div>
 </div>
 
 
 
+
 </div>
+<!-- -------- -->
+
+<!--After  filter   -->
+
+<section id="filter-section" class="hidden">
+</section>
+
+<section id="no-job-section" class="no-job bg-white text-center flex flex-col justify-center items-center space-y-2 py-24 hidden">
+      <img src="./Assets/jobs.png" alt="">
+      <p class="text-[#002C5C] text-2xl font-bold">No jobs available</p>
+      <p class="text-[#64748B]">Check back soon for new job opportunities</p>
+
+
+</section>
+
 
 
 
@@ -115,6 +308,6 @@
 
 
 
-
+  <script src="./javascript.js"></script>
 </body>
 </html>
