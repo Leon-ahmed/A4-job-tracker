@@ -1,3 +1,5 @@
+
+// Arrays for counting jobs
 let interviewList=[];
 let rejectedList=[];
 let currentView = 'all'; 
