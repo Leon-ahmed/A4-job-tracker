@@ -3,15 +3,16 @@
 let interviewList=[];
 let rejectedList=[];
 let currentView = 'all'; 
+// ---------------
 
+
+// Handles Interview, Reject, and Delete button actions--------------
 
 const mainSection=document.querySelector('main');
-
 mainSection.addEventListener('click',function(event){
-  
 
 if(event.target.classList.contains('interview')){
-      const parent=event.target.parentNode.parentNode;
+  const parent=event.target.parentNode.parentNode;
 
   const company=parent.querySelector('.company').innerText;
   const role=parent.querySelector('.role').innerText;
@@ -20,7 +21,7 @@ if(event.target.classList.contains('interview')){
   const  description=parent.querySelector('.description ').innerText;
 
   
-  
+  // Create Card Object
 const cardInfo={
 company,
 role,
@@ -60,7 +61,7 @@ calulateJob();
   const  description=parent.querySelector('.description ').innerText;
 
   
-  
+  // Create job object -----
 const cardInfo={
 company,
 role,
@@ -68,7 +69,7 @@ offer,
 status:'Rejected',
 description
 }
-
+// -------------------
 
 
 
@@ -82,13 +83,13 @@ rejectedList.push(cardInfo);
 
 interviewList = interviewList.filter(item => item.company !== cardInfo.company);
 
-// Update the current view-----------------------------
+// Update the current view-------------------------------------------------------------------
 if(currentView === 'interview'){
   dataInterview();
 } else if(currentView === 'rejected'){
   dataReject();
 }
-calulateJob();
+calulateJob();  //count total job
 }
  else if(event.target.classList.contains('delete-btn') || event.target.closest('.delete-btn')){
 
@@ -111,22 +112,19 @@ calulateJob();
 
     parent.remove();
     
-    // if all jobs are deleted--------------------------------------
+    // if all jobs are deleted-
     if(job.children.length === 0){
       job.classList.add('hidden');
       noJobSection.classList.remove('hidden');
     }
   }
-  calulateJob();
+  calulateJob(); // Update all jobs cards sections
 }
 
-
-
-
 })
+// --------------------------------------------------------------------
 
-
-
+//Data rendering --------------------------------------------------------------------------
 const filterSection=document.getElementById('filter-section');
 const noJobSection=document.getElementById('no-job-section');
 
@@ -145,6 +143,7 @@ function dataInterview(){
   for(let interview of interviewList){
     console.log(interview);
     
+    // create jobs dynamically by template literals
     let div=document.createElement('div');
     div.className='card-1 border-1 border-gray-100 bg-white py-8 px-5 space-y-3 rounded my-3 md:flex justify-between'
     div.innerHTML=`
@@ -226,16 +225,11 @@ function dataReject(){
 </div>
   <div class="delete-btn cursor-pointer"><img src="./Assets/delete.png "  alt=""></div>
 
-
-    
     `
     filterSection.appendChild(div);
   }
-
-
 }
-
-
+// -----------------------------------------------------------------------------------------------
 
 
 
@@ -254,6 +248,12 @@ Rejected.innerText=rejectedList.length;
 }  
 calulateJob()
 // -----------------------------------------------------
+
+
+
+
+
+
 
 
 
