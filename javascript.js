@@ -237,6 +237,7 @@ function dataReject(){
 let Total=document.getElementById('Total');
 let Interview=document.getElementById('Interview');
 let Rejected=document.getElementById('Rejected');
+let TotalJobs=document.getElementById('TotalJobs');
 const job=document.getElementById('All-card')
 
 
@@ -244,6 +245,9 @@ function calulateJob(){
 Total.innerText=job.children.length;
 Interview.innerText=interviewList.length;
 Rejected.innerText=rejectedList.length;
+if (TotalJobs) {
+  TotalJobs.innerText = job.children.length;
+}
 
 }  
 calulateJob()
